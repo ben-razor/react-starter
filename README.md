@@ -1,6 +1,6 @@
 # React Starter App
 
-A basic React App created using Webpack5.
+A very basic React App created using Webpack5.
 
 Commands:
 
