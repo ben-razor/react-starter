@@ -31,7 +31,7 @@ function App(props) {
         <h1>Welcome to REACT</h1>
       </div>
       <div className="br-content">
-        <button onClick={drinkMe}>Drink Me</button>
+        <button className="br-button" onClick={drinkMe}>Drink Me</button>
       </div>
     </div>
   );
