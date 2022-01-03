@@ -1,12 +1,132 @@
 @font-face {
     font-family: "AquaPlaygroundRegular";
-    src: url('./fonts/Lato-Regular.ttf'); 
+    src: url('../fonts/Lato-Regular.ttf'); 
 }
 
 body {
     font-family: AquaPlaygroundRegular, sans-serif; 
 }
 
-h1 {
-    color: hsla(75deg, 75%, 30%);
+div, input, select, button {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 0.25em 0;
+}
+
+p {
+    margin: 0 0 0.25em 0;
+}
+
+button, select, input {
+    font-family: AquaPlaygroundRegular, sans-serif; 
+}
+
+input[type=text], textarea {
+    padding: 0.25em;
+    border-radius: 0.5em;
+    border: 2px solid grey;
+    width: 100%;
+}
+
+input[type=checkbox] {
+    width: 1.28em;
+    height: 1.28em;
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {  
+    font-family: AquaPlaygroundRegular, sans-serif; 
+    outline: 1px solid hsl(342deg, 48%, 42%);
+}
+
+@keyframes loading-fade-in {
+    0% { opacity: 0; }
+    10% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes loading-fade-in-instant {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes loading-fade-in-delay-50 {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fade-in-with-grow {
+    0% { opacity: 0; transform: scaleY(0)}
+    100% { opacity: 1; transform: scaleY(1)}
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(359deg);}
+}
+
+.spin {
+    animation: spin 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(40);
+}
+
+.loading-fade-in {
+    animation: loading-fade-in 7s;
+}
+
+.loading-fade-in-fast {
+    animation: loading-fade-in-instant 3s;
+}
+
+.loading-fade-in-delay-50-fast {
+    animation: loading-fade-in-delay-50 3s;
+}
+
+.fade-in-with-grow-fast {
+    transform-origin: bottom center;
+    animation: fade-in-with-grow 1s;
+}
+
+.br-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.br-header-logo {
+    width: 4em;
+    height: 4em;
+}
+
+.br-page {
+    margin: 0em 10em 0em 10em;
+}
+
+.br-content {
+    padding: 0.5em;
+}
+
+@media (max-width: 992px) {
+    .tiny-hide {
+        display: none;
+    }
+    .br-page {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 576px) {
+    .br-header {
+        flex-direction: column;
+        font-size: 0.9em;
+    }
 }
