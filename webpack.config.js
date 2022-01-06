@@ -39,6 +39,10 @@ let config = {
                 type: 'asset/source'
             },
             {
+                test: /\.(scss)$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+            },
+            {
                 test: /\.css$/,
                 use: ['style-loader', {
                     loader: 'css-loader',

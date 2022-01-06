@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import './css/styles.css';
+import './scss/styles.scss';
 import { ToastProvider, useToasts } from 'react-toast-notifications';
 import Logo from './images/logo-1.png';
 
