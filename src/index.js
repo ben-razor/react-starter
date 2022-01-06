@@ -28,7 +28,7 @@ function App(props) {
     <div className="br-page">
       <div className="br-header">
         <img className="br-header-logo" alt="Ben Razor Head" src={Logo} />
-        <h1>Welcome to REACT</h1>
+        <h1>React Starter</h1>
       </div>
       <div className="br-content">
         <button className="br-button" onClick={drinkMe}>Drink Me</button>
